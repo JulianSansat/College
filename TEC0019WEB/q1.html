@@ -1,1 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function calcula() {
+	var val1 = document.getElementById("base").value;
+	var val2 = document.getElementById("altura").value;
+	result = (val1 * val2) / 2
+	document.getElementById("result1").innerHTML = "Area: " + result;  
+}
+
+</script>
+</head>
+<body>
+
+<h1>Questao 1</h1>
+ 	Base<input type="text" id="base" />
+ 	Altura<input type="text" id="altura" />
+ 	<button type="button" onclick="calcula()">Calcula</button>
+	 <p id="result1"></p>
+</body>
+</html> 
 
