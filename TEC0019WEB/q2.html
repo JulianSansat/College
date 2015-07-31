@@ -1,1 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function calcula() {
+
+ var val1 = document.getElementById("valor1").value;
+ val1 *= 3.3419
+ document.getElementById("result1").innerHTML = "USD: " + val1.toFixed(2);  
+
+}
+
+</script>
+</head>
+<body>
+
+<h1>Questao 2</h1>
+ 
+ R$<input type="text" id="valor1" />
+ <button type="button" onclick="calcula()">Calcula</button>
+ <p id="result1"></p>
+
+</body>
+</html> 
 
