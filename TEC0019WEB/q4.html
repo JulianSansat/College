@@ -1,2 +1,60 @@
 
 <!-- (4) Imprima um histograma (gráfico de barras) horizontal para representar uma tabela de cinco valores quaisquer (entre 0 e 100, por exemplo). Use um caractere como “#” ou “*” para desenhar as barras, através de estruturas de repetição (for ou while). -->
+<!DOCTYPE html>
+<html>
+<head>
+
+<script>
+function calcula() {
+
+var a = document.getElementById("A").value;
+var b = document.getElementById("B").value;
+var c = document.getElementById("C").value;
+var d = document.getElementById("D").value;
+var e = document.getElementById("E").value;
+
+
+
+
+for (var i = 0; i < a; i++) {
+	document.getElementById("result1").innerHTML += '#';
+}
+for (var i = 0; i < b; i++) {
+	document.getElementById("result2").innerHTML += '#';
+}
+for (var i = 0; i < c; i++) {
+	document.getElementById("result3").innerHTML += '#';
+}
+for (var i = 0; i < d; i++) {
+	document.getElementById("result4").innerHTML += '#';
+}
+for (var i = 0; i < e; i++) {
+	document.getElementById("result5").innerHTML += '#';
+}
+
+
+}
+
+
+
+</script>
+</head>
+<body>
+
+<h1>Questao 3</h1>
+ 
+ A: <input type="text" id="A" />
+ B: <input type="text" id="B" />
+ C: <input type="text" id="C" />
+ D: <input type="text" id="D" />
+ E: <input type="text" id="E" />
+ <button type="button" onclick="calcula()">Calcula</button>
+ <p id="result1">A: </p>
+ <p id="result2">B: </p>
+ <p id="result3">C: </p>
+ <p id="result4">D: </p>
+ <p id="result5">E: </p>
+
+</body>
+</html> 
+

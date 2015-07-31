@@ -1,1 +1,48 @@
 <!-- (5) Repita o problema anterior usando tabelas HTML. Cada barra deverá ter uma cor diferente. Use tabelas <TABLE> com células de cores diferentes <TD BGCOLOR="cor"> e repita os blocos <TD> para cada barra. -->
+<!DOCTYPE html>
+<html>
+<head>
+
+<script>
+function calcula() {
+
+var a = document.getElementById("A").value;
+var b = document.getElementById("B").value;
+var c = document.getElementById("C").value;
+var d = document.getElementById("D").value;
+var e = document.getElementById("E").value;
+var values = [a,b,c,d,e];
+var names = ["A","B","C","D","E"];
+
+for (var j = 0; j < 5; j++){
+	var mytable = "<table border=\"border: 1px solid black\"><tbody>";
+
+	mytable += "<tr><td width=\"10\" height=\"10\">"+ names[j] +"</td>";
+	
+	for (var i = 0; i < values[j]; i++) {
+		mytable += 	"<td bgcolor=\"red\" width=\"10\" height=\"10\"></td>";
+	}
+	mytable += "</tr>";
+
+	mytable += "</tbody></table>";
+
+	//document.getElementById("result1").innerHTML = mytable;
+	document.getElementById("divi").innerHTML += mytable;
+	}
+}
+
+
+</script>
+</head>
+<body>
+
+<h1>Questao 3</h1>
+ A: <input type="text" id="A" />
+ B: <input type="text" id="B" />
+ C: <input type="text" id="C" /><br >
+ D: <input type="text" id="D" />
+ E: <input type="text" id="E" />
+ <button type="button" onclick="calcula()">Calcula</button>
+ <div id="divi"></div>
+</body>
+</html> 
