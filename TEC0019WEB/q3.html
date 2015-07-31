@@ -1,2 +1,36 @@
 <!-- (3) Elabore uma página HTML com Javascript que lê um número (caixa de texto) e exibe a tabuada de multiplicação desse número. -->
+<!DOCTYPE html>
+<html>
+<head>
+
+<script>
+function calcula() {
+
+var n = document.getElementById("n").value;
+
+var mytable = "<table border=\"border: 1px solid black\"><tbody>";
+
+for (var i = 1; i < 10; i++) {
+	mytable += "<tr><td>" +  n + " X " + i +"</td><td>" + n*i + "</td></tr>";
+}
+
+mytable += "</tbody></table>";
+
+document.getElementById("result1").innerHTML = mytable;
+}
+
+
+
+</script>
+</head>
+<body>
+
+<h1>Questao 3</h1>
+ 
+ Numero: <input type="text" id="n" />
+ <button type="button" onclick="calcula()">Calcula</button>
+ <p id="result1"></p>
+
+</body>
+</html> 
 
