@@ -1,0 +1,10 @@
+<h1>Sistema de Agenda de Contatos</h1>
+<p id="notice"><%= notice %></p>
+<%= form_tag login_auth_path do %>
+	<%= label_tag(:email, "E-mail: ") %>
+	<%= text_field_tag :email %><br/>
+	<%= label_tag(:pass, "Senha: ") %>
+	<%= text_field_tag :pass %><br/>
+	<%= submit_tag 'Efetuar Login' %>
+<% end %>
+<%= link_to "Efetue o seu cadastro", new_user_path %>
