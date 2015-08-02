@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @contato.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @contato.email %>
+</p>
+
+<p>
+  <strong>Tel:</strong>
+  <%= @contato.tel %>
+</p>
+
+<p>
+  <strong>Img:</strong>
+  <%= @contato.img %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @contato.User %>
+</p>
+
+<%= link_to 'Edit', edit_contato_path(@contato) %> |
+<%= link_to 'Back', agenda_url %>
