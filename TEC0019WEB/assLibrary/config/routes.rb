@@ -1,16 +1,11 @@
 Rails.application.routes.draw do
 
+  get 'login/index'
 
-  get 'agenda/index'
-
-  get 'agenda/add'
-
-  get 'agenda/edit'
-
-  get '/agenda' => 'agenda#index', as: 'agenda'
-
-  resources :contatos
-  controller :sessions do
+  resources :books
+  resources :users
+  
+   controller :sessions do
     get 'login' => :new
     post 'login' => :create
     delete 'logout' => :destroy
@@ -18,13 +13,13 @@ Rails.application.routes.draw do
   get "sessions/new"
   get "sessions/create"
   get "sessions/destroy"
-  resources :users
-  post "users/new"
+
+  root 'sessions#new'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'sessions#new'
+  # root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
