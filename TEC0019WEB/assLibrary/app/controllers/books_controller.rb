@@ -5,6 +5,7 @@ class BooksController < ApplicationController
   # GET /books.json
   def index
     @books = Book.where(User_id: User.find_by(id: session[:user_id]))
+    @book = Book.new
   end
 
   # GET /books/1
@@ -29,6 +30,7 @@ class BooksController < ApplicationController
     respond_to do |format|
       if @book.save
         format.html { redirect_to @book, notice: 'Book was successfully created.' }
+        format.js   {}
         format.json { render :show, status: :created, location: @book }
       else
         format.html { render :new }
@@ -60,6 +62,14 @@ class BooksController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def order
+    @books = Book.order(:title)
+    respond_to do |format|
+    format.js { }
+    end
+  end  
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

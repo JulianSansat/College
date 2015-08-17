@@ -1,4 +1,4 @@
-<script type="text/javascript" src="listar.js"></script>
+
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Books</h1>
@@ -15,22 +15,12 @@
     </tr>
   </thead>
 
-  <tbody>
-    <% @books.each do |book| %>
-      <tr>
-        <td><%= book.title %></td>
-        <td><%= book.author %></td>
-        <td><%= book.publisher %></td>
-        <td><%= book.year %></td>
-        <td><%= book.User %></td>
-        <td><%= link_to 'Show', book %></td>
-        <td><%= link_to 'Edit', edit_book_path(book) %></td>
-        <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
+  <tbody id="rend">
+      <%= render partial: "book", collection: @books %>
   </tbody>
 </table>
 
 <br>
-<%= button_to "Order", books_path, :id => "botao", :method => :get %>
+
 <%= link_to 'New Book', new_book_path %>
+<%= button_to "order", order_books_path , remote: true %>

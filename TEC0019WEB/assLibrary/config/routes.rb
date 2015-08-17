@@ -2,7 +2,15 @@ Rails.application.routes.draw do
 
   get 'login/index'
 
-  resources :books
+  resources :books do
+    collection do
+      post 'order'
+    end 
+  end
+
+
+
+
   resources :users
   
    controller :sessions do
